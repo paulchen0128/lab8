@@ -33,6 +33,29 @@
     console.log('Button', letters[i], 'Clicked')
     }
 
+    function recipe (name, servings, list) {
+    this.name = name;
+    this.servings = servings;
+    this.list = list;
+
+    document.write("<br>")
+    document.write('Title:', name);
+    document.write("<br>");
+    document.write('Serves: ', servings);
+    document.write("<br>");
+    document.write('Ingredients');
+    document.write("<br>");
+    for (let i=0; i < list.length; i++) {
+        document.write(list[i]);
+        document.write("<br>");
+    }
+    }
+
+    myObj = new recipe ("Chicken Cacciatore", 2, ["cinnamon", "lettuce", "onion"] );
+
+    myObj.print()
+
+
 
 
 
