@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<script>
+
+    var num = prompt("Please number of buttons", "0");
+    var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+
+
+    if (num > 26) {
+    document.write("Number must be under 26")
+    }
+
+    function generate_button(num) {
+    for (let i=0; i < num; i++) {
+        let button = document.createElement("BUTTON");
+        button.innerHTML = letters[i];
+        document.body.appendChild(button);
+        button.onclick = function () {display(i)}
+        }
+    }
+
+    if (num < 27) {
+    generate_button(num);
+    }
+
+    function display(i) {
+    console.log('Button', letters[i], 'Clicked')
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>
